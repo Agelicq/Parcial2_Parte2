@@ -2,31 +2,6 @@ from crud.cliente_crud import registrar_cliente, clientes_registrados, buscar_po
 from crud.producto_crud import (vender_productos, obtener_producto, mostrar_productos,
     antibioticos_disponibles, fertilizantes_disponibles, productos_control_plagas_disponibles)
 
-"""
-def mostrar_productos(tipo_producto):
-    if tipo_producto == "antibiotico":
-        print("\nAntibióticos disponibles:")
-        for idx, producto in enumerate(antibioticos_disponibles, start=1):
-            print(
-                f"{idx}. {producto.nombre} - Dosis: {producto.dosis}mg - Tipo Animal: {producto.tipo_animal} - Precio: ${producto.precio}")
-        return len(antibioticos_disponibles)
-
-    elif tipo_producto == "fertilizante":
-        print("\nFertilizantes disponibles:")
-        for idx, producto in enumerate(fertilizantes_disponibles, start=1):
-            print(
-                f"{idx}. {producto.nombre} - Registro ICA: {producto.registro_ICA} - Frecuencia: {producto.frecuencia_aplicacion} - Precio: ${producto.precio}")
-        return len(fertilizantes_disponibles)
-
-    elif tipo_producto == "control_plagas":
-        print("\nProductos de Control de Plagas disponibles:")
-        for idx, producto in enumerate(productos_control_plagas_disponibles, start=1):
-            print(
-                f"{idx}. {producto.nombre} - Registro ICA: {producto.registro_ICA} - Frecuencia: {producto.frecuencia_aplicacion} - Carencia: {producto.periodo_carencia} días - Precio: ${producto.precio}")
-        return len(productos_control_plagas_disponibles)
-    return 0
-"""
-
 def menu_venta():
     cedula = input("Cédula del cliente: ")
     if not (cedula.isdigit() and int(cedula) > 0):
